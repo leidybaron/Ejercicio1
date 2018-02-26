@@ -1,9 +1,11 @@
-/*
+ /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
 package Parqueadero;
+
+import vehiculos.Moto;
 
 /**
  *
@@ -11,7 +13,7 @@ package Parqueadero;
  */
 public class FichaVehiculo extends javax.swing.JFrame {
     
-    
+     Moto miMoto=new Moto();
     
    
 
@@ -120,9 +122,15 @@ public class FichaVehiculo extends javax.swing.JFrame {
     private void BotonGuardarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BotonGuardarMouseClicked
         // TODO add your handling code here:
         
-        String a=TextoMarca.getText();
-        TextoCilindraje.setText(a);
-        TextoModelo.setText(a);
+        miMoto.marca=TextoMarca.getText();
+        miMoto.modelo=TextoModelo.getText();
+        
+        
+        //Un texto no se convierte automaticamente en numer!!
+        miMoto.año=Integer.parseInt(TextoAño.getText());
+        miMoto.cilindraje=Integer.parseInt(TextoCilindraje.getText());
+        
+
         
     }//GEN-LAST:event_BotonGuardarMouseClicked
 
