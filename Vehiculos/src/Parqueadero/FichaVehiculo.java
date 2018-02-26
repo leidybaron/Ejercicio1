@@ -5,6 +5,7 @@
  */
 package Parqueadero;
 
+import javax.swing.JOptionPane;
 import vehiculos.Moto;
 
 /**
@@ -13,14 +14,20 @@ import vehiculos.Moto;
  */
 public class FichaVehiculo extends javax.swing.JFrame {
     
-     Moto miMoto=new Moto();
-    
-   
+    //Arreglos de Objeto
+    Moto misMotos[]=new Moto[50];
+    Moto miMoto=new Moto();
+  
 
     /**
      * Creates new form FichaVehiculo
      */
     public FichaVehiculo() {
+        
+    for(int i=0; i<50; i++)
+    {
+       misMotos[i]=new Moto();
+    }
         initComponents();
     }
 
@@ -130,7 +137,8 @@ public class FichaVehiculo extends javax.swing.JFrame {
         miMoto.año=Integer.parseInt(TextoAño.getText());
         miMoto.cilindraje=Integer.parseInt(TextoCilindraje.getText());
         
-
+     JOptionPane.showMessageDialog(null,"Ingrese nuevamente los datos!!!");
+     
         
     }//GEN-LAST:event_BotonGuardarMouseClicked
 
