@@ -10,18 +10,19 @@ package vehiculos;
  * @author Estudiantes
  */
 public class Vehiculo {
-    
-    String marca;
-    private int cilindro;
-    private String modelo;
-    private int año;
-    
-    void acelerar()
-    {
-        
+
+    //Atributos
+    public String marca;
+    public int cilindraje;
+    public String modelo;
+    public int año;
+
+    //Metodos o Funciones
+    void acelerar() {
+        System.out.println("El vehiculo esta acelerando");
     }
-    void frenar()
-    {
-         
+
+    void frenar() {
+        System.out.println("El vehiculo esta frenando");
     }
 }

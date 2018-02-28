@@ -1,9 +1,12 @@
-/*
+ /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
 package Parqueadero;
+
+import javax.swing.JOptionPane;
+import vehiculos.Moto;
 
 /**
  *
@@ -11,14 +14,20 @@ package Parqueadero;
  */
 public class FichaVehiculo extends javax.swing.JFrame {
     
-    
-    
-   
+    //Arreglos de Objeto
+    Moto misMotos[]=new Moto[50];
+    Moto miMoto=new Moto();
+  
 
     /**
      * Creates new form FichaVehiculo
      */
     public FichaVehiculo() {
+        
+    for(int i=0; i<50; i++)
+    {
+       misMotos[i]=new Moto();
+    }
         initComponents();
     }
 
@@ -120,9 +129,16 @@ public class FichaVehiculo extends javax.swing.JFrame {
     private void BotonGuardarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BotonGuardarMouseClicked
         // TODO add your handling code here:
         
-        String a=TextoMarca.getText();
-        TextoCilindraje.setText(a);
-        TextoModelo.setText(a);
+        miMoto.marca=TextoMarca.getText();
+        miMoto.modelo=TextoModelo.getText();
+        
+        
+        //Un texto no se convierte automaticamente en numer!!
+        miMoto.año=Integer.parseInt(TextoAño.getText());
+        miMoto.cilindraje=Integer.parseInt(TextoCilindraje.getText());
+        
+     JOptionPane.showMessageDialog(null,"Ingrese nuevamente los datos!!!");
+     
         
     }//GEN-LAST:event_BotonGuardarMouseClicked
 

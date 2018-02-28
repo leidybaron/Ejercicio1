@@ -12,7 +12,6 @@ public class Moto extends Vehiculo {
         System.out.println("La moto esta acelerando");
     }
     
-    
     @Override
     void frenar()
     {
